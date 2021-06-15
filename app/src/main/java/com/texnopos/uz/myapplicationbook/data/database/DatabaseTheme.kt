@@ -1,4 +1,4 @@
-package com.texnopos.uz.myapplicationbook.data.DataBes
+package com.texnopos.uz.myapplicationbook.data.database
 
 import android.content.Context
 import androidx.room.Database
@@ -10,23 +10,24 @@ import com.texnopos.uz.myapplicationbook.data.model.Category
 import com.texnopos.uz.myapplicationbook.data.model.Theme
 
 
-@Database(entities = [Theme::class,Category::class], version = VERSION_CODE, exportSchema = false)
-abstract class DataBesThemes : RoomDatabase() {
+@Database(entities = [Theme::class, Category::class], version = 1, exportSchema = false)
+abstract class DatabaseTheme : RoomDatabase() {
     companion object {
-        private lateinit var INSTANCE: DataBesThemes
-        fun getInstance(context: Context): DataBesThemes {
+        private lateinit var INSTANCE: DatabaseTheme
+        fun getInstance(context: Context): DatabaseTheme {
             if (!Companion::INSTANCE.isInitialized) {
                 INSTANCE = Room.databaseBuilder(
-                        context,
-                        DataBesThemes::class.java,
-                        "Allanazar Abdirenov.db"
+                    context,
+                    DatabaseTheme::class.java,
+                    "Allanazar Abdirenov.db"
                 )
-                        .createFromAsset("Allanazar Abdirenov.db")
-                        .allowMainThreadQueries()
-                        .build()
+                    .createFromAsset("Allanazar Abdirenov.db")
+                    .allowMainThreadQueries()
+                    .build()
             }
             return INSTANCE
         }
     }
+
     abstract fun themesDao(): Themes
 }

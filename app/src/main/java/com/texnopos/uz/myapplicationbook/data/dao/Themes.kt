@@ -11,5 +11,8 @@ interface Themes {
     fun getAllThemes(): List<Theme>
 
     @Query("SELECT * FROM categoty where season=:season")
-    fun getAllCategory(season:Int) :List<Category>
+    fun getAllCategory(season: Int): List<Category>
+
+    // @Query("SELECT * FROM categoty WHERE id=:id")
+    //fun getTextById(id: Int)
 }

@@ -4,7 +4,7 @@
         android:bottomLeftRadius="@dimen/cardview_compat_inset_shadow"
         android:radius="4dp" />
     <gradient
-        android:centerColor="@color/purple_500"
+        android:centerColor="@color/white"
         android:centerX="@android:integer/config_longAnimTime"
         android:type="linear" />
 </shape>
