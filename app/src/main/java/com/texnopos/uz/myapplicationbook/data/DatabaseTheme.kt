@@ -7,10 +7,11 @@ import androidx.room.RoomDatabase
 import com.texnopos.uz.myapplicationbook.BuildConfig.VERSION_CODE
 import com.texnopos.uz.myapplicationbook.data.dao.Themes
 import com.texnopos.uz.myapplicationbook.data.model.Category
+import com.texnopos.uz.myapplicationbook.data.model.Text
 import com.texnopos.uz.myapplicationbook.data.model.Theme
 
 
-@Database(entities = [Theme::class, Category::class], version = 1, exportSchema = false)
+@Database(entities = [Theme::class, Category::class , Text::class], version = 1, exportSchema = false)
 abstract class DatabaseTheme : RoomDatabase() {
     companion object {
         private lateinit var INSTANCE: DatabaseTheme

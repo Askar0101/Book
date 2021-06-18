@@ -1,4 +1,4 @@
-package com.texnopos.uz.myapplicationbook.data.adapter
+package com.texnopos.uz.myapplicationbook.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -22,13 +22,13 @@ class BookThemeAdapter : RecyclerView.Adapter<BookView>() {
         return BookView(itemView)
     }
 
-   // var onItemClicked: () -> Unit = {}
-   // fun onItemClickListener(onItemClicked: () -> Unit){
-    //    this.onItemClicked = onItemClicked
-   // }
+    var onItemClicked: () -> Unit = {}
+    fun onItemClickListener(onItemClicked: () -> Unit) {
+        this.onItemClicked = onItemClicked
+    }
 
     override fun getItemCount(): Int = model.size
     override fun onBindViewHolder(holder: BookView, position: Int) {
-        holder.populetModel(model[position] )
+        holder.populetModel(model[position],onItemClicked)
     }
 }
