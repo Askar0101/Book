@@ -1,37 +1,34 @@
-package com.texnopos.uz.myapplicationbook.data.Adapter
+package com.texnopos.uz.myapplicationbook.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.texnopos.uz.myapplicationbook.R
+import com.texnopos.uz.myapplicationbook.data.BookView
 import com.texnopos.uz.myapplicationbook.data.model.Category
-import com.texnopos.uz.myapplicationbook.data.model.Theme
-import kotlinx.android.synthetic.main.item.view.*
 
-class BookAdapterThemes : RecyclerView.Adapter<BookAdapterThemes.BookView>() {
+class BookThemeAdapter : RecyclerView.Adapter<BookView>() {
+
     var model: List<Category> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
-    inner class BookView(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun populeteModel(data: Category) {
-            itemView.Textview.text = data.Catename
-
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookView {
         val itemView: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.inner_item, parent, false)
         return BookView(itemView)
     }
 
-    var onItemClicked: (id: Int) -> Unit = {}
+    var onItemClicked: () -> Unit = {}
+    fun onItemClickListener(onItemClicked: () -> Unit) {
+        this.onItemClicked = onItemClicked
+    }
+
     override fun getItemCount(): Int = model.size
     override fun onBindViewHolder(holder: BookView, position: Int) {
-        holder.populeteModel(model[position])
+        holder.populetModel(model[position],onItemClicked)
     }
 }
