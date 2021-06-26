@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationBook">
-        <activity android:name=".data.detall.DetailActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".data.MagliwmatFragment"></activity>
+        <activity android:name=".data.detall.DetailActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

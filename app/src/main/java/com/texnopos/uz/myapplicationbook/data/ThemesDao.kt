@@ -7,7 +7,7 @@ import com.texnopos.uz.myapplicationbook.data.model.Text
 import com.texnopos.uz.myapplicationbook.data.model.Theme
 
 @Dao
-interface Themes {
+interface ThemesDao {
     @Query("SELECT * FROM themes")
     fun getAllThemes(): List<Theme>
 

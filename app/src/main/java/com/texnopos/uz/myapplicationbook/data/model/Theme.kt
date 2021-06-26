@@ -6,13 +6,11 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "themes")
 data class Theme(
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "name")
     val name: String,
-    @ColumnInfo(name = "text")
-    val text: String,
-    @ColumnInfo(name = "is-favorite")
+    @ColumnInfo(name = "is_favorite")
     var favorite: Int,
-    @ColumnInfo(name = "category-id")
+    @ColumnInfo(name = "category_id")
     val category: Int
 )

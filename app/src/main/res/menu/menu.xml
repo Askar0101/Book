@@ -10,7 +10,7 @@
         android:title="Tanlanganlar" />
     <item
         android:id="@+id/ic_services"
-        android:icon="@drawable/ic_baseline_miscellaneous_services_24"
-        android:title="Ma'lumot" />
+        android:icon="@drawable/ic_baseline_error_outline_24"
+        android:title="Izlew" />
 
 </menu>
