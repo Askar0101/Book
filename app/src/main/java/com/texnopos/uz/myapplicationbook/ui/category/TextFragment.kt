@@ -2,6 +2,7 @@ package com.texnopos.uz.myapplicationbook.ui.category
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import com.texnopos.uz.myapplicationbook.R
@@ -34,8 +35,21 @@ TextFragment : Fragment(R.layout.text_item) {
             settings.textSize = settings.textSize - 2f
             textSize()
         }
+
+        imgFav.setOnClickListener {
+            if (imgFav.setImageResource(R.drawable.ic_baseline_bookmark_24) != imgFav.setImageResource(
+                    R.drawable.ic_baseline_bookmark_24
+                )
+            ) {
+                imgFav.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
+            } else {
+                imgFav.setImageResource(R.drawable.ic_baseline_bookmark_24)
+            }
+        }
     }
-    fun textSize(){
+
+    fun textSize() {
         textView.textSize = settings.textSize
     }
+
 }
