@@ -1,12 +1,11 @@
 package com.texnopos.uz.myapplicationbook.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.texnopos.uz.myapplicationbook.R
 import com.texnopos.uz.myapplicationbook.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_toolbar.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.myToolbar))
         val mFragment = HomeFragment()
-        val save = SectionFragment()
+            // val save = SectionFragment()
         val search = SearchFragment()
         fragment(mFragment)
         setTitle(R.string.text)
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                     fragment(mFragment)
                 }
                 R.id.ic_Save -> {
-                      fragment(save)
+                     // fragment(save)
                 }
                 R.id.ic_services -> {
                    fragment(search)
