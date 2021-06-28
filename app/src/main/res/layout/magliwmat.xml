@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="280dp"
+    android:minHeight="560dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/imageViewTexnoPos"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewMagliwmat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:text="  Алланазар ӘБДИЕВ
+ИЙТ ҲӘМ АДАМ ямаса АШЛЫҚ СЫНАҒЫ
+(Повесть, гүрриң, тымсал, интермедия ҳәм сценариялар)
+Алланазар Әбдиев — халқымызға белгили жазыўшы.
+ Бүгинги күнге шекем оның 24 көркем әдебий, илимий ҳәм публицистикалық
+  китаплары жарық көрди.
+Жазыўшы гезектеги топламына өзиниң соңғы
+гездеги дөреткен повести менен сара гүрриңлерин (2-пасыл), сондай-ақ
+ дөретиўшилигиниң ерте дәўирлеринде жазып, бурын баспасөзге усынбаған гүрриң,
+ тымсал, интермедия ҳәм сценарияларын (1-пасыл) жыйнаған.
+Киши жанрдың шебери сыпатында танылған
+ А.Әбдиевтиң бул дөретпелери сизлердиң кеўиллериңизден
+  жыллы жай алатуғынына беккем исенемиз.
+ПИКИР БИЛДИРГЕНЛЕР:
+Кеӊесбай Алламбергенов— филология илимлериниӊ докторы, профессор.
+ «Қарақалпақстан Республикасы Халық жазыӯшысы», Бердақ атындағы
+ Қарақалпақ мәмлекетлик сыйлығыныӊ лауреаты.
+
+Бекназар Ерназаров	— Өзбекстан ҳәм Қарақалпақстан жазыўшылар
+аўқамының ағзасы, жазыӯшы.
+
+Жуманияз Өтениязов	— Өзбекстан ҳәм Қарақалпақстан жазыўшылар
+ аўқамының ағзасы, шайыр, жазыӯшы.
+
+Ташкент — 2021
+"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageViewTexnoPos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_texnopos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageViewTATU"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewTATU"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_tatu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewTexnoPos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

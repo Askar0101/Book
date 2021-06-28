@@ -3,14 +3,14 @@
     <item
         android:id="@+id/ic_Home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Kitap mazmuni" />
+        android:title="   " />
     <item
         android:id="@+id/ic_Save"
         android:icon="@drawable/ic_baseline_favorite_24"
-        android:title="Tanlanganlar" />
+        android:title="  " />
     <item
         android:id="@+id/ic_services"
-        android:icon="@drawable/ic_baseline_miscellaneous_services_24"
-        android:title="Ma'lumot" />
+        android:icon="@drawable/ic_baseline_error_outline_24"
+        android:title=" " />
 
 </menu>
