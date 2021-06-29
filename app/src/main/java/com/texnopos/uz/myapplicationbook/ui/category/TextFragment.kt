@@ -9,14 +9,16 @@ import com.texnopos.uz.myapplicationbook.R
 import com.texnopos.uz.myapplicationbook.ui.Settings
 import com.texnopos.uz.myapplicationbook.data.DatabaseTheme
 import com.texnopos.uz.myapplicationbook.data.ThemesDao
+import com.texnopos.uz.myapplicationbook.data.model.Theme
 import com.texnopos.uz.myapplicationbook.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.app_textview_toolbar.*
 import kotlinx.android.synthetic.main.text_item.*
 
-class
-TextFragment : Fragment(R.layout.text_item) {
+class TextFragment : Fragment(R.layout.text_item) {
     private lateinit var dao: ThemesDao
     lateinit var settings: Settings
+    private val theme = Theme()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val categoryId = arguments?.getInt(HomeFragment.CATEGORY_ID)
@@ -37,18 +39,15 @@ TextFragment : Fragment(R.layout.text_item) {
         }
 
         imgFav.setOnClickListener {
-            if (imgFav.setImageResource(R.drawable.ic_baseline_bookmark_24) != imgFav.setImageResource(
-                    R.drawable.ic_baseline_bookmark_24
-                )
-            ) {
-                imgFav.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
-            } else {
+            if(theme.favorite == 0){
                 imgFav.setImageResource(R.drawable.ic_baseline_bookmark_24)
+            } else {
+                imgFav.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
             }
         }
     }
 
-    fun textSize() {
+    private fun textSize() {
         textView.textSize = settings.textSize
     }
 

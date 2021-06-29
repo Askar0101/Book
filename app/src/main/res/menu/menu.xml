@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/ic_Home"
+        android:id="@+id/icon_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="   " />
+        android:title="Home" />
     <item
-        android:id="@+id/ic_Save"
+        android:id="@+id/icon_favourite"
         android:icon="@drawable/ic_baseline_favorite_24"
-        android:title="  " />
+        android:title="Favourite" />
     <item
-        android:id="@+id/ic_services"
+        android:id="@+id/ic_about"
         android:icon="@drawable/ic_baseline_error_outline_24"
-        android:title=" " />
+        android:title="About" />
 
 </menu>

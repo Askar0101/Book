@@ -5,6 +5,7 @@ import androidx.room.Query
 import com.texnopos.uz.myapplicationbook.data.model.Category
 import com.texnopos.uz.myapplicationbook.data.model.Text
 import com.texnopos.uz.myapplicationbook.data.model.Theme
+import java.util.*
 
 @Dao
 interface ThemesDao {
@@ -25,4 +26,7 @@ interface ThemesDao {
 
     @Query("SELECT * FROM texts WHERE theme_id=:themeId")
     fun getTextByThemeId(themeId: Int): Text
+
+    @Query("SELECT * FROM themes WHERE is_favorite = 1")
+    fun getFavorite(): Theme
 }

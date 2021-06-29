@@ -9,8 +9,9 @@ data class Theme(
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "name")
     val name: String,
-    @ColumnInfo(name = "is_favorite")
-    var favorite: Int,
     @ColumnInfo(name = "category_id")
-    val category: Int
+    val category: Int,
+
+    @ColumnInfo(name = "is_favorite")
+    var favorite: Int
 )
